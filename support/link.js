@@ -1,4 +1,4 @@
-async function clickLinkByText(page, linkText) {
+async function clickLinkByTextWithNavigation(page, linkText) {
     const element = await find.findAnchorFieldContainText(page, linkText)
     await element.focus()
     return await Promise.all([
@@ -11,11 +11,10 @@ async function clickLinkByText(page, linkText) {
     ])
 }
 
-async function clickLinkByTextWithNavigation(page, linkText) {
+async function clickLinkByText(page, linkText) {
     const element = await find.findAnchorFieldContainText(page, linkText)
     await element.focus()
     return await Promise.all([
-        delay(10000),
         element.click()
     ])
 

@@ -1,10 +1,7 @@
+const { Then } = require("cucumber");
 
-const {
-    Then
-} = require("cucumber");
+const { clickLinkByTextWithNavigation } = require("../support/link");
 
-const { clickLinkByText } = require("../support/link");
-
-Then('I click on {string} menu link', function (menuItem) {
-    return clickLinkByText(scope.page, menuItem)
+Then('I click on {string} menu link', function(menuItem) {
+    return clickLinkByTextWithNavigation(scope.page, menuItem)
 });

@@ -1,29 +1,42 @@
+const { assert } = require("chai")
+const { Then } = require("cucumber")
 const {
-    Then
-} = require("cucumber");
-const { findElementBySelector } = require("../support/find");
-const { clickLinkByTextWithNavigation } = require("../support/link");
+    findElementBySelector,
+    findElementByCssSelector
+} = require("../support/find")
+const { clickLinkByText } = require("../support/link")
+const { sendText } = require("../support/inputfield")
 
-Then('It should show contact form with below fieldset:', async function (dataTable) {
-    const contactFromElements = await findElementBySelector(scope.page, 'label')
-    const actailValues = await processContactForm(contactFromElements)
-    return assert.deepEqual(actailValues, dataTable.rawTable)
+Then('It should show contact form with below fieldset:', async function(dataTable) {
+    const contactFormElements = await findElementBySelector(scope.page, 'label')
+    const actualValues = await processContactForm(contactFormElements)
+    return assert.deepEqual(actualValues, dataTable.rawTable)
+})
+
+Then('I click on {string} button', function(buttonText) {
+    return clickLinkByText(scope.page, buttonText)
+})
+
+Then('It should following error messages:', async function(dataTable) {
+    const contactFormElements = await findElementBySelector(scope.page, '.help-inline')
+    const actualValues = await processContactForm(contactFormElements)
+    return assert.deepEqual(actualValues, dataTable.rawTable)
+})
+
+Then('I enter {string} in the {string} field', async function(inputValue, labelText) {
+    console.log("input", inputValue)
+    return await sendText(scope.page, labelText, inputValue)
+})
+
+Then('Validate errors are gone', async function() {
+    const contactFormElements = await findElementByCssSelector(scope.page, '.help-inline')
+    return assert.equal(contactFormElements.length, 0)
+
 });
 
-
-Then('I click on {string} button', function (buttonText) {
-    return clickLinkByTextWithNavigation(scope.page, buttonText)
-});
-
-Then('It should following error messages:', async function (dataTable) {
-    const contactFromElements = await findElementBySelector(scope.page, '.help-inline')
-    const actailValues = await processContactForm(contactFromElements)
-    return assert.deepEqual(actailValues, dataTable.rawTable)
-});
-
-async function processContactForm(contactFromElements) {
+async function processContactForm(contactFormElements) {
     let temp = []
-    for (let element of contactFromElements) {
+    for (let element of contactFormElements) {
         let lableText = await scope.page.evaluate(
             el => el.innerText.trim(), element
         )

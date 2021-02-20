@@ -5,7 +5,7 @@
     "line": 2,
     "id": "plan-it-automation-interview",
     "tags": [],
-    "uri": "features\\home.feature",
+    "uri": "features/home.feature",
     "elements": [
       {
         "id": "plan-it-automation-interview;execute-test-case-1",
@@ -24,24 +24,24 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "step_definitions\\hooks.js:22"
+              "location": "step_definitions/hooks.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1074000000
+              "duration": 1140000000
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 6,
-            "name": "I launch Jupitar plait Applciation",
+            "name": "I launch Jupiter planit Applciation",
             "match": {
-              "location": "step_definitions\\launch_steps.js:5"
+              "location": "step_definitions/launch_steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 4937000000
+              "duration": 4939000000
             }
           },
           {
@@ -50,11 +50,11 @@
             "line": 7,
             "name": "I click on \"Contact\" menu link",
             "match": {
-              "location": "step_definitions\\home_steps.js:8"
+              "location": "step_definitions/home_steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1018000000
+              "duration": 1046000000
             }
           },
           {
@@ -93,11 +93,11 @@
             "line": 8,
             "name": "It should show contact form with below fieldset:",
             "match": {
-              "location": "step_definitions\\contact_steps.js:7"
+              "location": "step_definitions/contact_steps.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 22000000
+              "duration": 12000000
             }
           },
           {
@@ -106,11 +106,11 @@
             "line": 14,
             "name": "I click on \"Submit\" button",
             "match": {
-              "location": "step_definitions\\contact_steps.js:14"
+              "location": "step_definitions/contact_steps.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 10019000000
+              "duration": 42000000
             }
           },
           {
@@ -139,22 +139,100 @@
             "line": 15,
             "name": "It should following error messages:",
             "match": {
-              "location": "step_definitions\\contact_steps.js:18"
+              "location": "step_definitions/contact_steps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 21000000
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I enter \"Nagalakshmi\" in the \"Forename *\" field",
+            "match": {
+              "location": "step_definitions/contact_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I enter \"selvaraj\" in the \"Surname\" field",
+            "match": {
+              "location": "step_definitions/contact_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I enter \"lakshmi.padumanabhan@gmail.com\" in the \"Email *\" field",
+            "match": {
+              "location": "step_definitions/contact_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I enter \"56668787878\" in the \"Telephone\" field",
+            "match": {
+              "location": "step_definitions/contact_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I enter \"testing\" in the \"Message *\" field",
+            "match": {
+              "location": "step_definitions/contact_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "Validate errors are gone",
+            "match": {
+              "location": "step_definitions/contact_steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "step_definitions\\hooks.js:63"
+              "location": "step_definitions/hooks.js:63"
             },
             "result": {
               "status": "passed",
-              "duration": 253000000
+              "duration": 73000000
             }
           }
         ]

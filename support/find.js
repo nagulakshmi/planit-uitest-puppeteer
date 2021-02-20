@@ -1,39 +1,62 @@
 async function findFieldByType(page, inputType, fieldText) {
+
     let matchingElements = await page.$$(inputType)
-    let elemetMatched = null
+    let elementMatched = null
 
     for (let element of matchingElements) {
         let lableText = await page.evaluate(
             el => el.innerText.trim(), element
         )
-
         if (lableText === fieldText) {
-            elemetMatched = element
+            elementMatched = element
         }
     }
 
-    if (elemetMatched == null) {
+
+
+    if (elementMatched == null) {
         throw new Error(`Unable to find an element : ${fieldText}`)
     }
 
-    return elemetMatched
+    return elementMatched
 }
 
 async function findAnchorFieldContainText(page, anchorText) {
     return await findFieldByType(page, 'a', anchorText)
 }
 
+async function findInputFieldWithLabel(page, labelText) {
+    let elementMatched = await findFieldByType(page, 'label', labelText)
+    const labelElement = await page.evaluate(
+        el => el.getAttribute('for'), elementMatched
+    )
+    let element = await page.$(`input[id=${labelElement}`)
+    if (element == null) {
+        element = await page.$(`textarea[id=${labelElement}`)
+
+    }
+    return element
+}
+
 async function findElementBySelector(page, selector) {
     let matchingElements = await page.$$(selector)
     if (matchingElements !== null && matchingElements.length > 0) {
-        console.log('The number of elemenent found', matchingElements.length)
+        console.log('The number of element found', matchingElements.length)
         return matchingElements
-    } 
-    throw new Error(`Unable to find an element : ${fieldText}`)    
+    }
+    throw new Error(`Unable to find an element : ${fieldText}`)
+}
+
+async function findElementByCssSelector(page, selector) {
+    return await page.$$(selector)
+
 }
 
 module.exports = {
     findFieldByType,
     findAnchorFieldContainText,
-    findElementBySelector
+    findElementBySelector,
+    findInputFieldWithLabel,
+    findElementByCssSelector
+
 }
