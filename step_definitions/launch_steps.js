@@ -1,6 +1,5 @@
 const {
-    Given,
-    Then
+    Given
 } = require("cucumber")
 
 Given('I launch Jupitar plait Applciation', async function () {
@@ -12,4 +11,3 @@ Given('I launch Jupitar plait Applciation', async function () {
         console.log("Page not loaded successfully...")
     }
 });
-

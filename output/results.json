@@ -5,7 +5,7 @@
     "line": 2,
     "id": "plan-it-automation-interview",
     "tags": [],
-    "uri": "features/home.feature",
+    "uri": "features\\home.feature",
     "elements": [
       {
         "id": "plan-it-automation-interview;execute-test-case-1",
@@ -24,11 +24,11 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "step_definitions/hooks.js:22"
+              "location": "step_definitions\\hooks.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1718000000
+              "duration": 1074000000
             }
           },
           {
@@ -37,22 +37,124 @@
             "line": 6,
             "name": "I launch Jupitar plait Applciation",
             "match": {
-              "location": "step_definitions/launch.js:6"
+              "location": "step_definitions\\launch_steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 4269000000
+              "duration": 4937000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I click on \"Contact\" menu link",
+            "match": {
+              "location": "step_definitions\\home_steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1018000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Forename *"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Surname"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Email *"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Telephone"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Message *"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "It should show contact form with below fieldset:",
+            "match": {
+              "location": "step_definitions\\contact_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I click on \"Submit\" button",
+            "match": {
+              "location": "step_definitions\\contact_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10019000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Forename is required"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Email is required"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Message is required"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "It should following error messages:",
+            "match": {
+              "location": "step_definitions\\contact_steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21000000
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "step_definitions/hooks.js:63"
+              "location": "step_definitions\\hooks.js:63"
             },
             "result": {
               "status": "passed",
-              "duration": 69000000
+              "duration": 253000000
             }
           }
         ]

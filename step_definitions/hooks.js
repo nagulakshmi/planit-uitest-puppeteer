@@ -75,4 +75,10 @@ const {
   function setGlobalVariables() {
     global.scope = require('../support/scope')
     global.constants = require('../support/constants')
+    global.link = require('../support/link')
+    global.find = require('../support/find')
+
+    global.chai = require('chai')
+    global.assert = chai.assert
+    global.expect = chai.expect
   }
