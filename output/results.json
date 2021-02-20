@@ -1,0 +1,62 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Plan it automation interview",
+    "line": 2,
+    "id": "plan-it-automation-interview",
+    "tags": [],
+    "uri": "features/home.feature",
+    "elements": [
+      {
+        "id": "plan-it-automation-interview;execute-test-case-1",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Execute Test case 1",
+        "tags": [
+          {
+            "name": "@test",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/hooks.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1718000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I launch Jupitar plait Applciation",
+            "match": {
+              "location": "step_definitions/launch.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4269000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

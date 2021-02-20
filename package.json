@@ -1,0 +1,17 @@
+{
+  "name": "planit",
+  "version": "1.0.0",
+  "description": "plant it automation test",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=default ./node_modules/cucumber/bin/cucumber-js --tags=@test ./features/*.feature -r ./step_definitions/ -f json:output/results.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "cucumber": "^6.0.5",
+    "konfig": "^0.2.1",
+    "puppeteer": "^7.1.0"
+  }
+}
