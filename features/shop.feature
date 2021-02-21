@@ -1,6 +1,6 @@
 Feature: Plan it automation interview
 
-    @test1
+    @test
     Scenario: Test case 4- Verify the items are in the cart
         Given I launch Jupiter planit Applciation
         Then I click on "Shop" menu link

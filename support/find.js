@@ -38,9 +38,7 @@ async function findInputFieldWithLabel(page, labelText) {
 
 async function findElementBySelector(page, selector) {
     let matchingElements = await page.$$(selector)
-    console.log("matchingElements", matchingElements)
     if (matchingElements !== null && matchingElements.length > 0) {
-        console.log('The number of element found', matchingElements.length)
         return matchingElements
     }
     throw new Error(`Unable to find an element : ${selector}`)

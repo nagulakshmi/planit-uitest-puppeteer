@@ -10,8 +10,11 @@
 
  const {
      findElementBySelector,
+     findElementByCssSelector
  } = require("../support/find");
- const { elementVisible } = require("../support/wait");
+ const {
+     elementVisible
+ } = require("../support/wait");
 
  Then('It should show all product items with below:', async function(dataTable) {
      const contactFormElements = await findElementBySelector(scope.page, 'h4')
@@ -43,23 +46,30 @@
  Then('I should see the following items in the cart:', async function(dataTable) {
      await elementVisible(scope.page, '.cart-items')
      const cartElements = await findElementBySelector(scope.page, '.cart-item')
+     let actualValues = []
      for (let cartElm of cartElements) {
+         let row = []
          const columnElements = await findElementBySelector(cartElm, 'td')
          for (let tdElm of columnElements) {
-             const qtyElm = await findElementBySelector(tdElm, '.input-mini')
-             const columnText = null;
+             const qtyElm = await findElementByCssSelector(tdElm, 'input')
+             let columnText = null;
              if (qtyElm.length !== 0) {
                  columnText = await scope.page.evaluate(
-                     el => el.value.trim(), tdElm
+                     el => el.value.trim(), qtyElm[0]
                  )
              } else {
                  columnText = await scope.page.evaluate(
                      el => el.innerText.trim(), tdElm
                  )
              }
-             console.log("columnText", columnText)
+             if (columnText !== "") {
+                 row.push(columnText)
+             }
          }
+         actualValues.push(row)
      }
+     return assert.deepEqual(actualValues, dataTable.rawTable)
+
  });
 
  async function processContactForm(contactFormElements) {
