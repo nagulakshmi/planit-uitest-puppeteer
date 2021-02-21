@@ -1,11 +1,22 @@
-const { assert } = require("chai")
-const { Then } = require("cucumber")
+const {
+    assert
+} = require("chai")
+const {
+    Then
+} = require("cucumber")
 const {
     findElementBySelector,
     findElementByCssSelector
 } = require("../support/find")
-const { clickLinkByText } = require("../support/link")
-const { sendText } = require("../support/inputfield")
+const {
+    clickLinkByText
+} = require("../support/link")
+const {
+    sendText
+} = require("../support/inputfield")
+const {
+    elementVisible
+} = require("../support/wait")
 
 Then('It should show contact form with below fieldset:', async function(dataTable) {
     const contactFormElements = await findElementBySelector(scope.page, 'label')
@@ -15,7 +26,15 @@ Then('It should show contact form with below fieldset:', async function(dataTabl
 
 Then('I click on {string} button', function(buttonText) {
     return clickLinkByText(scope.page, buttonText)
+
 })
+
+Then('I submit the form using {string} button', async function(buttonText) {
+    await clickLinkByText(scope.page, buttonText)
+    return elementVisible(scope.page, '.alert-success')
+
+});
+
 
 Then('It should following error messages:', async function(dataTable) {
     const contactFormElements = await findElementBySelector(scope.page, '.help-inline')
@@ -33,15 +52,16 @@ Then('Validate errors are gone', async function() {
     return assert.equal(contactFormElements.length, 0)
 });
 
-Then('I should see {string} success message', async function(string) {
-    const contactFormElements = await findElementByCssSelector(scope.page, '.alert-success')
-    return assert.deepEqual(contactFormElements, string)
+Then('I should see {string} success message', async function(expectedMsg) {
+    const alertMessage = await findElementByCssSelector(scope.page, '.alert-success')
+    assert.equal(alertMessage.length, 1)
+    let actualMessage = await scope.page.evaluate(
+        el => el.innerText.trim(), alertMessage[0]
+    )
+    return assert.equal(actualMessage, expectedMsg)
 });
 
-// Then('Then I should see {string} error message', async function(inputValue, errorText) {
-//     console.log("input", inputValue)
-//     return await sendText(scope.page, errorText, inputValue)
-// })
+
 
 async function processContactForm(contactFormElements) {
     let temp = []

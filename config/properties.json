@@ -4,6 +4,6 @@
         "width": 1366,
         "height": 768,
         "headlessMode": false,
-        "pageTimeout": 600
+        "pageTimeout": 60000
     }
 }

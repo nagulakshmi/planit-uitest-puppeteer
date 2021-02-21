@@ -12,6 +12,9 @@
      return assert.deepEqual(actualValues, dataTable.rawTable)
  });
 
+ Then('I click on {string} button on Funny Cow', async function(buttonText) {
+     return clickByButton(scope.page, buttonText)
+ })
 
  async function processContactForm(contactFormElements) {
      let temp = []

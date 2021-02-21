@@ -38,6 +38,10 @@ async function findInputFieldWithLabel(page, labelText) {
     return element
 }
 
+async function findButtonFieldContainText(page, buttonText) {
+
+}
+
 async function findElementBySelector(page, selector) {
     let matchingElements = await page.$$(selector)
     if (matchingElements !== null && matchingElements.length > 0) {

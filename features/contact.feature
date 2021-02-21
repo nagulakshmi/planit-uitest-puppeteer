@@ -24,7 +24,7 @@ Feature: Plan it automation interview
         Then Validate errors are gone
         
 
-    @test1
+    @test
     Scenario: Test Case 2 - Verify form validation and successful submission message
         Given I launch Jupiter planit Applciation
         Then I click on "Contact" menu link
@@ -41,7 +41,7 @@ Feature: Plan it automation interview
         And I enter "56668787878" in the "Telephone" field
         And I enter "testing" in the "Message *" field
         Then Validate errors are gone
-        Then I click on "Submit" button
+        Then I submit the form using "Submit" button 
         Then I should see "Thanks Nagalakshmi, we appreciate your feedback." success message
 
     @test
