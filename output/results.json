@@ -5,13 +5,13 @@
     "line": 2,
     "id": "plan-it-automation-interview",
     "tags": [],
-    "uri": "features/home.feature",
+    "uri": "features/contact.feature",
     "elements": [
       {
-        "id": "plan-it-automation-interview;execute-test-case-1",
+        "id": "plan-it-automation-interview;test-case-1--verify-form-validation-messages",
         "keyword": "Scenario",
         "line": 5,
-        "name": "Execute Test case 1",
+        "name": "Test case 1- Verify form validation messages",
         "tags": [
           {
             "name": "@test",
@@ -28,7 +28,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1140000000
+              "duration": 1448000000
             }
           },
           {
@@ -41,7 +41,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4939000000
+              "duration": 8549000000
             }
           },
           {
@@ -54,7 +54,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1046000000
+              "duration": 1047000000
             }
           },
           {
@@ -97,7 +97,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 10000000
             }
           },
           {
@@ -110,7 +110,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 42000000
+              "duration": 75000000
             }
           },
           {
@@ -143,7 +143,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 6000000
             }
           },
           {
@@ -156,7 +156,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 60000000
+              "duration": 55000000
             }
           },
           {
@@ -169,7 +169,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 50000000
+              "duration": 34000000
             }
           },
           {
@@ -182,7 +182,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 98000000
+              "duration": 105000000
             }
           },
           {
@@ -195,7 +195,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 68000000
+              "duration": 54000000
             }
           },
           {
@@ -208,7 +208,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 48000000
+              "duration": 34000000
             }
           },
           {
@@ -221,7 +221,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 4000000
             }
           },
           {
@@ -232,7 +232,306 @@
             },
             "result": {
               "status": "passed",
-              "duration": 73000000
+              "duration": 89000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "plan-it-automation-interview;test-case-3---verify-form-validation-with-invalid-data-field",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "Test Case 3 - Verify form validation with invalid data field",
+        "tags": [
+          {
+            "name": "@test",
+            "line": 47
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/hooks.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1210000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 49,
+            "name": "I launch Jupiter planit Applciation",
+            "match": {
+              "location": "step_definitions/launch_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9585000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 50,
+            "name": "I click on \"Contact\" menu link",
+            "match": {
+              "location": "step_definitions/home_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1039000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Forename *"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Surname"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Email *"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Telephone"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Message *"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "It should show contact form with below fieldset:",
+            "match": {
+              "location": "step_definitions/contact_steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "I enter \"123455\" in the \"Forename *\" field",
+            "match": {
+              "location": "step_definitions/contact_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I enter \"lakshmi.padumanabha\" in the \"Email *\" field",
+            "match": {
+              "location": "step_definitions/contact_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "I enter \"!@#$%^&\" in the \"Message *\" field",
+            "match": {
+              "location": "step_definitions/contact_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Please enter a valid email"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 60,
+            "name": "It should following error messages:",
+            "match": {
+              "location": "step_definitions/contact_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Plan it automation interview",
+    "line": 1,
+    "id": "plan-it-automation-interview",
+    "tags": [],
+    "uri": "features/shop.feature",
+    "elements": [
+      {
+        "id": "plan-it-automation-interview;execute-test-case-4",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Execute Test case 4",
+        "tags": [
+          {
+            "name": "@test",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/hooks.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1159000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I launch Jupiter planit Applciation",
+            "match": {
+              "location": "step_definitions/launch_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6854000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I click on \"Shop\" menu link",
+            "match": {
+              "location": "step_definitions/home_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1034000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Teddy Bear"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Stuffed Frog"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Handmade Doll"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Fluffy Bunny"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Smiley Bear"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Funny Cow"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Valentine Bear"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Smiley Face"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "It should show all product items with below:",
+            "match": {
+              "location": "step_definitions/cartitem_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/hooks.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54000000
             }
           }
         ]

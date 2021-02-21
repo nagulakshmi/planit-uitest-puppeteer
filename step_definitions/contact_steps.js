@@ -31,8 +31,17 @@ Then('I enter {string} in the {string} field', async function(inputValue, labelT
 Then('Validate errors are gone', async function() {
     const contactFormElements = await findElementByCssSelector(scope.page, '.help-inline')
     return assert.equal(contactFormElements.length, 0)
-
 });
+
+Then('I should see {string} success message', async function(string) {
+    const contactFormElements = await findElementByCssSelector(scope.page, '.alert-success')
+    return assert.deepEqual(contactFormElements, string)
+});
+
+// Then('Then I should see {string} error message', async function(inputValue, errorText) {
+//     console.log("input", inputValue)
+//     return await sendText(scope.page, errorText, inputValue)
+// })
 
 async function processContactForm(contactFormElements) {
     let temp = []
