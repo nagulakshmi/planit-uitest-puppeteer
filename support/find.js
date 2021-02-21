@@ -2,17 +2,15 @@ async function findFieldByType(page, inputType, fieldText) {
 
     let matchingElements = await page.$$(inputType)
     let elementMatched = null
-
     for (let element of matchingElements) {
         let lableText = await page.evaluate(
             el => el.innerText.trim(), element
+
         )
-        if (lableText === fieldText) {
+        if (lableText.startsWith(fieldText)) {
             elementMatched = element
         }
     }
-
-
 
     if (elementMatched == null) {
         throw new Error(`Unable to find an element : ${fieldText}`)
@@ -38,17 +36,14 @@ async function findInputFieldWithLabel(page, labelText) {
     return element
 }
 
-async function findButtonFieldContainText(page, buttonText) {
-
-}
-
 async function findElementBySelector(page, selector) {
     let matchingElements = await page.$$(selector)
+    console.log("matchingElements", matchingElements)
     if (matchingElements !== null && matchingElements.length > 0) {
         console.log('The number of element found', matchingElements.length)
         return matchingElements
     }
-    throw new Error(`Unable to find an element : ${fieldText}`)
+    throw new Error(`Unable to find an element : ${selector}`)
 }
 
 async function findElementByCssSelector(page, selector) {

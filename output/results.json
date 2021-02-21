@@ -2,637 +2,6 @@
   {
     "keyword": "Feature",
     "name": "Plan it automation interview",
-    "line": 2,
-    "id": "plan-it-automation-interview",
-    "tags": [],
-    "uri": "features/contact.feature",
-    "elements": [
-      {
-        "id": "plan-it-automation-interview;test-case-1--verify-form-validation-messages",
-        "keyword": "Scenario",
-        "line": 5,
-        "name": "Test case 1- Verify form validation messages",
-        "tags": [
-          {
-            "name": "@test",
-            "line": 4
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "step_definitions/hooks.js:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1612000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 6,
-            "name": "I launch Jupiter planit Applciation",
-            "match": {
-              "location": "step_definitions/launch_steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6095000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I click on \"Contact\" menu link",
-            "match": {
-              "location": "step_definitions/home_steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1045000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Forename *"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Surname"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Email *"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Telephone"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Message *"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "It should show contact form with below fieldset:",
-            "match": {
-              "location": "step_definitions/contact_steps.js:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 12000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "I click on \"Submit\" button",
-            "match": {
-              "location": "step_definitions/contact_steps.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 42000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Forename is required"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Email is required"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Message is required"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Then ",
-            "line": 15,
-            "name": "It should following error messages:",
-            "match": {
-              "location": "step_definitions/contact_steps.js:39"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "I enter \"Nagalakshmi\" in the \"Forename *\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 49000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 20,
-            "name": "I enter \"selvaraj\" in the \"Surname\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 35000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 21,
-            "name": "I enter \"lakshmi.padumanabhan@gmail.com\" in the \"Email *\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 114000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 22,
-            "name": "I enter \"56668787878\" in the \"Telephone\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 47000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 23,
-            "name": "I enter \"testing\" in the \"Message *\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 32000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 24,
-            "name": "Validate errors are gone",
-            "match": {
-              "location": "step_definitions/contact_steps.js:50"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "step_definitions/hooks.js:63"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 85000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "plan-it-automation-interview;test-case-2---verify-form-validation-and-successful-submission-message",
-        "keyword": "Scenario",
-        "line": 28,
-        "name": "Test Case 2 - Verify form validation and successful submission message",
-        "tags": [
-          {
-            "name": "@test",
-            "line": 27
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "step_definitions/hooks.js:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1152000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 29,
-            "name": "I launch Jupiter planit Applciation",
-            "match": {
-              "location": "step_definitions/launch_steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7954000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 30,
-            "name": "I click on \"Contact\" menu link",
-            "match": {
-              "location": "step_definitions/home_steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1039000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Forename *"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Surname"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Email *"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Telephone"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Message *"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Then ",
-            "line": 31,
-            "name": "It should show contact form with below fieldset:",
-            "match": {
-              "location": "step_definitions/contact_steps.js:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 37,
-            "name": "I click on \"Submit\" button",
-            "match": {
-              "location": "step_definitions/contact_steps.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 37000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 38,
-            "name": "I enter \"Nagalakshmi\" in the \"Forename *\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 68000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 39,
-            "name": "I enter \"selvaraj\" in the \"Surname\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 37000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 40,
-            "name": "I enter \"lakshmi.padumanabhan@gmail.com\" in the \"Email *\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 100000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 41,
-            "name": "I enter \"56668787878\" in the \"Telephone\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 46000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 42,
-            "name": "I enter \"testing\" in the \"Message *\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 34000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 43,
-            "name": "Validate errors are gone",
-            "match": {
-              "location": "step_definitions/contact_steps.js:50"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 44,
-            "name": "I submit the form using \"Submit\" button",
-            "match": {
-              "location": "step_definitions/contact_steps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1145000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 45,
-            "name": "I should see \"Thanks Nagalakshmi, we appreciate your feedback.\" success message",
-            "match": {
-              "location": "step_definitions/contact_steps.js:55"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "step_definitions/hooks.js:63"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 85000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "plan-it-automation-interview;test-case-3---verify-form-validation-with-invalid-data-field",
-        "keyword": "Scenario",
-        "line": 48,
-        "name": "Test Case 3 - Verify form validation with invalid data field",
-        "tags": [
-          {
-            "name": "@test",
-            "line": 47
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "step_definitions/hooks.js:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1231000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 49,
-            "name": "I launch Jupiter planit Applciation",
-            "match": {
-              "location": "step_definitions/launch_steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6938000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 50,
-            "name": "I click on \"Contact\" menu link",
-            "match": {
-              "location": "step_definitions/home_steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1037000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Forename *"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Surname"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Email *"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Telephone"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Message *"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Then ",
-            "line": 51,
-            "name": "It should show contact form with below fieldset:",
-            "match": {
-              "location": "step_definitions/contact_steps.js:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 57,
-            "name": "I enter \"123455\" in the \"Forename *\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 34000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 58,
-            "name": "I enter \"lakshmi.padumanabha\" in the \"Email *\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 68000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 59,
-            "name": "I enter \"!@#$%^&\" in the \"Message *\" field",
-            "match": {
-              "location": "step_definitions/contact_steps.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 32000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "Please enter a valid email"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Then ",
-            "line": 60,
-            "name": "It should following error messages:",
-            "match": {
-              "location": "step_definitions/contact_steps.js:39"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "step_definitions/hooks.js:63"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 76000000
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Plan it automation interview",
     "line": 1,
     "id": "plan-it-automation-interview",
     "tags": [],
@@ -645,7 +14,7 @@
         "name": "Execute Test case 4",
         "tags": [
           {
-            "name": "@test",
+            "name": "@test1",
             "line": 3
           }
         ],
@@ -659,7 +28,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1155000000
+              "duration": 1379000000
             }
           },
           {
@@ -672,7 +41,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8706000000
+              "duration": 6052000000
             }
           },
           {
@@ -739,11 +108,98 @@
             "line": 7,
             "name": "It should show all product items with below:",
             "match": {
-              "location": "step_definitions/cartitem_steps.js:9"
+              "location": "step_definitions/cartitem_steps.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 64000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I click on Buy button on \"Funny Cow\"",
+            "match": {
+              "location": "step_definitions/cartitem_steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I click on Buy button on \"Funny Cow\"",
+            "match": {
+              "location": "step_definitions/cartitem_steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I click on Buy button on \"Fluffy Bunny\"",
+            "match": {
+              "location": "step_definitions/cartitem_steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I click on \"Cart\" menu link",
+            "match": {
+              "location": "step_definitions/home_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1037000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Funny Cow",
+                      "$10.99",
+                      "2",
+                      "$21.98"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Fluffy Bunny",
+                      "$9.99",
+                      "1",
+                      "$9.99"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I should see the following items in the cart:",
+            "match": {
+              "location": "step_definitions/cartitem_steps.js:43"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1183000000,
+              "error_message": "Error: Unable to find an element : .input-mini\n    at findElementBySelector (/Users/selvarajperumal/Workspace/planit-uitest-puppeteer/support/find.js:46:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
             }
           },
           {
@@ -754,7 +210,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 68000000
+              "duration": 0
             }
           }
         ]

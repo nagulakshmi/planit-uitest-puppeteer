@@ -43,7 +43,6 @@ Then('It should following error messages:', async function(dataTable) {
 })
 
 Then('I enter {string} in the {string} field', async function(inputValue, labelText) {
-    console.log("input", inputValue)
     return await sendText(scope.page, labelText, inputValue)
 })
 
@@ -60,8 +59,6 @@ Then('I should see {string} success message', async function(expectedMsg) {
     )
     return assert.equal(actualMessage, expectedMsg)
 });
-
-
 
 async function processContactForm(contactFormElements) {
     let temp = []
